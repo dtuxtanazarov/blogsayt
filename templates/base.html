@@ -1,0 +1,22 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<header>
+    {% if user.is_authenticated %}
+    <p>Xush kelibsiz</p>
+    <a href="{% url 'logout' %}">Log Out</a>
+
+      {% else %}
+      <a href="{% url 'login' %}">Log In</a>
+      {% endif %}
+    <h2>
+        <p><a href="{%url 'homepage'%}">Asosiy sahifa</a></p>
+
+    </h2>
+</header>
+
+{%block matn%}
+{%endblock%}
+<p><a href="{%url 'newpost'%}">Yangi sahifa qo`shish</a></p>

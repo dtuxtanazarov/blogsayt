@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+
+{%block matn%}
+<h2>{{index.title}}</h2>
+{{index.text}}
+{{index.author}}
+<p><a href="{%url 'editpost' index.pk %}">+Tahrirlash</a></p>
+{%endblock%}
+

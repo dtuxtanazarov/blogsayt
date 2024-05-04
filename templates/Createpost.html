@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+
+{%block matn%}
+<h1>Yangi post qo`shish</h1>
+<form action="" method="post">{%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="ADD">
+</form>
+{%endblock%}
+
